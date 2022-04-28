@@ -1,0 +1,23 @@
+@model Usuario
+
+@{
+    ViewBag.Subtitulo = "Cadastro";
+}
+
+<h1 class="text-primary">Cadastro de Usuário</h1>
+<hr>
+<form method="POST" class="w-25">
+    <input asp-for="Id" hidden>
+    <div class="form-group">
+        <label asp-for="Nome">Nome:</label></br>
+        <input asp-for="Nome" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Email">E-mail:</label></br>
+        <input asp-for="Email" class="form-control">
+    </div>
+    <div class="mt-3">
+        <a href="/Home/Usuarios" class="btn btn-ligth">Cancelar</a>
+        <button class="btn btn-primary" type="submit">Salvar</button>
+    </div>
+</form>
